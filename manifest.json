@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "IP",
+  "version": "1.0",
+  "description": "Extensão criada por Clayton que identifica automaticamente o endereço IP de qualquer site que você acessar, sem a necessidade de cliques. Ideal para desenvolvedores, administradores de redes e usuários interessados em monitoramento de conexões diretamente no navegador.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
